@@ -48,7 +48,7 @@ class App extends Component {
     const { onSearchChange } = this;
 
     //This depends on the state
-    const filteredCats = this.state.cats.filter( (cat) => {return cat.name.toLowerCase().includes(this.state.searchField);});
+    const filteredCats = cats.filter( (cat) => {return cat.name.toLowerCase().includes(searchField);});
 
     return (
       <div className="App">
@@ -56,7 +56,7 @@ class App extends Component {
           className='search-box' 
           type='search' 
           placeholder='search cats' 
-          onChange={this.onSearchChange}/>
+          onChange={onSearchChange}/>
       <header className="App-header">
         <h1>List of Cat Names</h1>
         {filteredCats.map( (cat) => {
